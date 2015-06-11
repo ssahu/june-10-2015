@@ -1,9 +1,9 @@
 #!/bin/python
 def get_largest_sum_subseq(arr):
-  max_latest = 0
-  max_sum = 0
-  for num in arr:
-    max_latest = max([0, max_latest + num])
+  max_latest = arr[0]
+  max_sum = max_latest
+  for num in arr[1:]:
+    max_latest = max([num, max_latest + num])
     max_sum = max([max_sum, max_latest])
   return max_sum
 if __name__ == '__main__':
